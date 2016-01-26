@@ -64,8 +64,6 @@ public class Description_Fragment extends YouTubeBaseActivity implements YouTube
 
 
 
-
-
     }
     @Override
     public void onInitializationFailure(YouTubePlayer.Provider provider,
