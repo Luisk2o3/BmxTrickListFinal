@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pt.ipbeja.estig.pdm.bmxtricklist.Description_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/view"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Descrição"
+        android:id="@+id/textView"
+        android:layout_gravity="left|center_vertical"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="72dp" />
+
+</RelativeLayout>

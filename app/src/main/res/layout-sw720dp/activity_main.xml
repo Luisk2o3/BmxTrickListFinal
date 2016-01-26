@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:gravity="center">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/easy_tricks"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/trickseasy"
+            android:onClick="easytricks_Onclick" />
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/mediumtricks"
+            android:onClick="Mediumtricks_Onclick"
+            android:id="@+id/medium_trick" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/hardtricks"
+            android:layout_margin="20dp"
+            android:onClick="Hardtricks_Onclick"
+            android:id="@+id/hard_trick" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grindtricks"
+            android:layout_margin="20dp"
+            android:onClick="Grindtricks_Onclick"
+            android:id="@+id/grind_trick" />
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/flatlandtricks"
+            android:layout_margin="20dp"
+            android:onClick="Flatlandtricks_Onclick"
+            android:id="@+id/flatland_trick" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ramptips"
+            android:layout_margin="20dp"
+            android:onClick="Ramptips_Onclick"
+            android:id="@+id/ramp_tip" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+</ScrollView>
