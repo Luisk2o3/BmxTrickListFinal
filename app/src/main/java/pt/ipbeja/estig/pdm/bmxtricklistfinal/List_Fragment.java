@@ -1,29 +1,80 @@
 package pt.ipbeja.estig.pdm.bmxtricklistfinal;
 
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.List;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class List_Fragment extends Fragment {
+public class List_Fragment extends ListFragment {
+
 
 
     public List_Fragment() {
         // Required empty public constructor
     }
 
+    public void SetTrickLevel(String trickLevel) {
+        mTrickLevel=trickLevel;
+    }
+
+    public String mTrickLevel;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list_, container, false);
+
+        DatabaseHandler db = new DatabaseHandler(getContext());
+        List<Trick> tricks = db.getTrickBySelect(mTrickLevel);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(), android.R.layout.simple_list_item_1);
+        for (Trick trick : tricks) {
+            adapter.add(trick.getTricks());
+        }
+        setListAdapter(adapter);
+
+
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+
+//            Description_Fragment newFragment = new Description_Fragment();
+//         Intent intent = new Intent();
+//         intent.putExtra(Description_Fragment.ARG_POSITION, position);
+//         newFragment.setIntent(intent);
+//
+//
+//            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+//
+//            // Replace whatever is in the fragment_container view with this fragment,
+//            // and add the transaction to the back stack so the user can navigate back
+//            transaction.replace(R.id.fragmentContainer, newFragment);
+//            transaction.addToBackStack(null);
+//
+//            // Commit the transaction
+//            transaction.commit();
+
+        Intent intent = new Intent(getContext(), Description_Fragment.class);
+        intent.putExtra(Description_Fragment.ARG_POSITION, position);
+        startActivity(intent);
+    }
+
+
 }
+
