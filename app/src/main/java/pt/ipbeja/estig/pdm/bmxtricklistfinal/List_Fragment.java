@@ -24,7 +24,7 @@ public class List_Fragment extends ListFragment {
 
 
     public List_Fragment() {
-        // Required empty public constructor
+
     }
 
     public void SetTrickLevel(String trickLevel) {
@@ -53,22 +53,6 @@ public class List_Fragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-
-//            Description_Fragment newFragment = new Description_Fragment();
-//         Intent intent = new Intent();
-//         intent.putExtra(Description_Fragment.ARG_POSITION, position);
-//         newFragment.setIntent(intent);
-//
-//
-//            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-//
-//            // Replace whatever is in the fragment_container view with this fragment,
-//            // and add the transaction to the back stack so the user can navigate back
-//            transaction.replace(R.id.fragmentContainer, newFragment);
-//            transaction.addToBackStack(null);
-//
-//            // Commit the transaction
-//            transaction.commit();
 
         Intent intent = new Intent(getContext(), Description_Fragment.class);
         intent.putExtra(Description_Fragment.ARG_POSITION, position);
